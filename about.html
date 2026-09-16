@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Pet Care Buddy</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+
+body{
+  background:#faf8ff;
+  color:#514b5f;
+  line-height:1.6;
+}
+
+header{
+  padding:18px 7%;
+  background:white;
+  border-bottom:1px solid #eee8fa;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#7655a8;
+  font-size:21px;
+  font-weight:700;
+}
+
+.logo-icon{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:#eee5ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+nav{
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#696272;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#7655a8;
+}
+
+.container{
+  width:86%;
+  max-width:1050px;
+  margin:auto;
+  padding:55px 0;
+}
+
+.hero{
+  text-align:center;
+  padding:35px 10px 50px;
+}
+
+.hero-icon{
+  width:75px;
+  height:75px;
+  border-radius:23px;
+  background:#eee5ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:38px;
+  margin:0 auto 20px;
+}
+
+.hero h1{
+  color:#443c50;
+  font-size:43px;
+  margin-bottom:10px;
+}
+
+.hero h1 span{
+  color:#8664b5;
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  color:#817a88;
+  font-size:15px;
+}
+
+.section{
+  background:white;
+  border:1px solid #eee8f7;
+  border-radius:24px;
+  padding:30px;
+  margin-bottom:20px;
+}
+
+.section h2{
+  color:#4c4555;
+  font-size:23px;
+  margin-bottom:10px;
+}
+
+.section p{
+  color:#817a88;
+  font-size:14px;
+}
+
+.values{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.value{
+  background:#fcfbff;
+  border:1px solid #eee8f7;
+  border-radius:18px;
+  padding:23px;
+}
+
+.value-icon{
+  font-size:27px;
+  margin-bottom:12px;
+}
+
+.value h3{
+  color:#4c4555;
+  font-size:17px;
+  margin-bottom:5px;
+}
+
+.value p{
+  color:#817a88;
+  font-size:13px;
+}
+
+.cta{
+  text-align:center;
+  background:#eee5ff;
+  border-radius:24px;
+  padding:40px 25px;
+  margin-top:25px;
+}
+
+.cta h2{
+  color:#4a4057;
+  margin-bottom:8px;
+}
+
+.cta p{
+  color:#746b7e;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  background:#8664b5;
+  color:white;
+  padding:12px 20px;
+  border-radius:11px;
+  font-size:13px;
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:white;
+  border-top:1px solid #eee8f7;
+  color:#8b8492;
+  font-size:13px;
+  margin-top:45px;
+}
+
+@media(max-width:700px){
+  nav{display:none}
+  .container{width:90%;padding:40px 0}
+  .hero h1{font-size:34px}
+  .values{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-icon">🐾</div>
+Pet Care Buddy
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="my-pet.html">My Pets</a>
+<a href="care.html">Care</a>
+<a href="reminders.html">Reminders</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<main class="container">
+
+<section class="hero">
+
+<div class="hero-icon">🐾</div>
+
+<h1>About <span>Pet Care Buddy</span></h1>
+
+<p>
+Pet Care Buddy is a simple digital companion designed to help
+pet parents organize everyday pet care in one friendly place.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<h2>Our Purpose</h2>
+
+<p>
+Taking care of a pet comes with many small responsibilities —
+feeding routines, vaccinations, medicines, vet visits and
+important reminders. Pet Care Buddy brings these everyday
+tasks together so pet parents can keep their pet's care
+organized and easy to manage.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<h2>What We Believe</h2>
+
+<div class="values">
+
+<div class="value">
+<div class="value-icon">💜</div>
+<h3>Simple Care</h3>
+<p>
+Pet-care tools should be easy to understand and comfortable
+to use every day.
+</p>
+</div>
+
+<div class="value">
+<div class="value-icon">🐾</div>
+<h3>Happy Pets</h3>
+<p>
+Better organization can help pet parents stay consistent
+with everyday care routines.
+</p>
+</div>
+
+<div class="value">
+<div class="value-icon">✨</div>
+<h3>Better Routine</h3>
+<p>
+Keep important pet information and reminders organized in
+one place.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Built for Pet Parents</h2>
+
+<p>
+Whether you have a playful puppy, a curious cat, a rabbit,
+a bird or another companion, Pet Care Buddy is designed to
+grow with your pet-care routine.
+</p>
+
+</section>
+
+
+<section class="cta">
+
+<h2>Start caring smarter today. 🐾</h2>
+
+<p>
+Create your pet profile and begin organizing their care.
+</p>
+
+<a href="my-pet.html" class="btn">
+Get Started →
+</a>
+
+</section>
+
+</main>
+
+
+<footer>
+© 2026 Pet Care Buddy · Made with care for pets 🐾
+</footer>
+
+</body>
+</html>
