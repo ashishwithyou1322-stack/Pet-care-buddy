@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Profile | Pet Care Buddy</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#faf8ff;color:#514b5f}
+header{padding:18px 7%;background:white;border-bottom:1px solid #eee8fa;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;color:#7655a8;font-size:21px;font-weight:700}
+.logo-icon{width:38px;height:38px;border-radius:12px;background:#eee5ff;display:flex;align-items:center;justify-content:center}
+nav{display:flex;gap:25px}
+nav a{text-decoration:none;color:#696272;font-size:14px}
+.container{width:86%;max-width:1050px;margin:auto;padding:50px 0}
+.profile{background:white;border:1px solid #eee8f7;border-radius:25px;padding:30px;display:flex;align-items:center;gap:28px;margin-bottom:25px}
+.avatar{width:150px;height:150px;border-radius:25px;background:#eee5ff;display:flex;align-items:center;justify-content:center;font-size:75px}
+.profile h1{font-size:38px;color:#443c50;margin-bottom:6px}
+.profile p{color:#817a88;font-size:14px;margin:4px 0}
+.badge{display:inline-block;margin-top:12px;padding:7px 12px;border-radius:20px;background:#f0e9fb;color:#7655a8;font-size:12px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid #eee8f7;border-radius:20px;padding:23px}
+.icon{width:48px;height:48px;border-radius:14px;background:#eee5ff;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:15px}
+.card h2{font-size:18px;color:#4c4555;margin-bottom:6px}
+.card p{font-size:13px;color:#817a88}
+.back{display:inline-block;margin-bottom:20px;text-decoration:none;color:#7655a8;font-size:14px;font-weight:600}
+.empty{margin-top:20px;background:#eee5ff;padding:20px;border-radius:16px;color:#655b70;font-size:13px}
+footer{text-align:center;padding:25px;background:white;border-top:1px solid #eee8f7;color:#8b8492;font-size:13px;margin-top:45px}
+@media(max-width:700px){
+nav{display:none}.container{width:90%}.profile{flex-direction:column;text-align:center}.profile h1{font-size:32px}.grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<div class="logo-icon">🐾</div>
+Pet Care Buddy
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="my-pet.html">My Pets</a>
+<a href="care.html">Care</a>
+<a href="reminders.html">Reminders</a>
+</nav>
+</header>
+
+<main class="container">
+
+<a href="my-pet.html" class="back">← Back to My Pets</a>
+
+<section class="profile">
+<div class="avatar">🐶</div>
+
+<div>
+<h1 id="petName">My Pet</h1>
+<p id="petDetails">Pet profile information</p>
+<span class="badge">🐾 Active Profile</span>
+</div>
+</section>
+
+<section class="grid">
+
+<div class="card">
+<div class="icon">💉</div>
+<h2>Vaccinations</h2>
+<p>Keep vaccination records and upcoming vaccine dates organized.</p>
+</div>
+
+<div class="card">
+<div class="icon">💊</div>
+<h2>Medicines</h2>
+<p>Track medicines and important medication schedules.</p>
+</div>
+
+<div class="card">
+<div class="icon">🍖</div>
+<h2>Feeding</h2>
+<p>Maintain a simple daily feeding routine for your pet.</p>
+</div>
+
+<div class="card">
+<div class="icon">🩺</div>
+<h2>Vet Visits</h2>
+<p>Keep useful information about veterinary visits and notes.</p>
+</div>
+
+<div class="card">
+<div class="icon">📋</div>
+<h2>Health Notes</h2>
+<p>Save important health observations and care information.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔔</div>
+<h2>Reminders</h2>
+<p>Stay updated with your pet's upcoming care tasks.</p>
+</div>
+
+</section>
+
+<div class="empty">
+💜 More detailed pet-care tools will be connected here as the app grows.
+</div>
+
+</main>
+
+<footer>
+© 2026 Pet Care Buddy · Made with care for pets 🐾
+</footer>
+
+<script>
+const pets=JSON.parse(localStorage.getItem("pets"))||[];
+
+if(pets.length>0){
+const pet=pets[0];
+
+document.getElementById("petName").textContent=pet.name;
+
+document.getElementById("petDetails").textContent=
+(pet.breed||pet.type)+" · "+
+pet.age+" "+
+(pet.age==1?"Year":"Years")+" · "+
+pet.gender;
+}
+</script>
+
+</body>
+</html>
