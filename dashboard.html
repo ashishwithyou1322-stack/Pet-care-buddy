@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Pet Care Buddy</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#faf8ff;color:#514b5f}
+header{padding:18px 7%;background:white;border-bottom:1px solid #eee8fa;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;color:#7655a8;font-size:21px;font-weight:700}
+.logo-icon{width:38px;height:38px;border-radius:12px;background:#eee5ff;display:flex;align-items:center;justify-content:center}
+nav{display:flex;gap:25px}
+nav a{text-decoration:none;color:#696272;font-size:14px}
+nav a:hover{color:#7655a8}
+
+.container{width:86%;max-width:1100px;margin:auto;padding:45px 0}
+
+.welcome{margin-bottom:30px}
+.welcome h1{font-size:38px;color:#443c50;margin-bottom:6px}
+.welcome p{font-size:14px;color:#817a88}
+
+.pet-summary{background:#eee5ff;border-radius:24px;padding:25px;display:flex;align-items:center;justify-content:space-between;margin-bottom:25px}
+.pet-left{display:flex;align-items:center;gap:18px}
+.pet-avatar{width:75px;height:75px;border-radius:20px;background:white;display:flex;align-items:center;justify-content:center;font-size:40px}
+.pet-summary h2{color:#4c4555;margin-bottom:4px}
+.pet-summary p{color:#746b7e;font-size:13px}
+.profile-btn{background:#8664b5;color:white;text-decoration:none;padding:11px 16px;border-radius:10px;font-size:13px;font-weight:600}
+
+.section-title{font-size:23px;color:#4c4555;margin:30px 0 15px}
+
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.quick{background:white;border:1px solid #eee8f7;border-radius:18px;padding:20px;text-decoration:none;transition:.2s}
+.quick:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(91,67,120,.07)}
+.quick-icon{font-size:25px;margin-bottom:12px}
+.quick h3{font-size:15px;color:#4c4555;margin-bottom:4px}
+.quick p{font-size:12px;color:#817a88}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.stat{background:white;border:1px solid #eee8f7;border-radius:18px;padding:22px}
+.stat-number{font-size:30px;font-weight:700;color:#8664b5}
+.stat-label{font-size:13px;color:#817a88;margin-top:3px}
+
+.tip{margin-top:25px;background:white;border:1px solid #eee8f7;border-radius:20px;padding:22px}
+.tip h3{color:#4c4555;margin-bottom:6px}
+.tip p{font-size:13px;color:#817a88}
+
+footer{text-align:center;padding:25px;background:white;border-top:1px solid #eee8f7;color:#8b8492;font-size:13px;margin-top:45px}
+
+@media(max-width:800px){
+nav{display:none}
+.quick-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:550px){
+.container{width:90%;padding:35px 0}
+.welcome h1{font-size:31px}
+.pet-summary{align-items:flex-start;gap:15px;flex-direction:column}
+.profile-btn{width:100%;text-align:center}
+.quick-grid,.stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<div class="logo-icon">🐾</div>
+Pet Care Buddy
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="my-pet.html">My Pets</a>
+<a href="care.html">Care</a>
+<a href="reminders.html">Reminders</a>
+</nav>
+</header>
+
+<main class="container">
+
+<section class="welcome">
+<h1>Pet Care Dashboard 🐾</h1>
+<p>Your pet's care, organized in one simple place.</p>
+</section>
+
+<section class="pet-summary">
+
+<div class="pet-left">
+<div class="pet-avatar" id="petAvatar">🐶</div>
+
+<div>
+<h2 id="petName">No Pet Added</h2>
+<p id="petInfo">Add a pet to start managing their care.</p>
+</div>
+</div>
+
+<a href="my-pet.html" class="profile-btn">Manage Pets →</a>
+
+</section>
+
+<h2 class="section-title">Quick Care</h2>
+
+<section class="quick-grid">
+
+<a href="care.html" class="quick">
+<div class="quick-icon">💉</div>
+<h3>Vaccinations</h3>
+<p>Manage vaccine records.</p>
+</a>
+
+<a href="care.html" class="quick">
+<div class="quick-icon">💊</div>
+<h3>Medicines</h3>
+<p>Track medicine schedules.</p>
+</a>
+
+<a href="care.html" class="quick">
+<div class="quick-icon">🍖</div>
+<h3>Feeding</h3>
+<p>Manage feeding routine.</p>
+</a>
+
+<a href="care.html" class="quick">
+<div class="quick-icon">🩺</div>
+<h3>Vet Visits</h3>
+<p>View vet information.</p>
+</a>
+
+</section>
+
+<h2 class="section-title">Overview</h2>
+
+<section class="stats">
+
+<div class="stat">
+<div class="stat-number" id="petCount">0</div>
+<div class="stat-label">Pets Added</div>
+</div>
+
+<div class="stat">
+<div class="stat-number" id="reminderCount">0</div>
+<div class="stat-label">Active Reminders</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">4</div>
+<div class="stat-label">Care Categories</div>
+</div>
+
+</section>
+
+<section class="tip">
+<h3>💜 Today's Care Tip</h3>
+<p>
+A consistent daily routine can make it easier to remember
+feeding, medication and other important care tasks.
+</p>
+</section>
+
+</main>
+
+<footer>
+© 2026 Pet Care Buddy · Made with care for pets 🐾
+</footer>
+
+<script>
+
+const pets=JSON.parse(localStorage.getItem("pets"))||[];
+const reminders=JSON.parse(localStorage.getItem("petReminders"))||[];
+
+document.getElementById("petCount").textContent=pets.length;
+
+document.getElementById("reminderCount").textContent=
+reminders.filter(r=>!r.completed).length;
+
+if(pets.length>0){
+
+const pet=pets[0];
+
+document.getElementById("petName").textContent=pet.name;
+
+document.getElementById("petInfo").textContent=
+(pet.breed||pet.type)+" · "+
+pet.age+" "+
+(pet.age==1?"Year":"Years")+" · "+
+pet.gender;
+
+if(pet.type==="Cat")
+document.getElementById("petAvatar").textContent="🐱";
+
+if(pet.type==="Rabbit")
+document.getElementById("petAvatar").textContent="🐰";
+
+if(pet.type==="Bird")
+document.getElementById("petAvatar").textContent="🐦";
+
+}
+
+</script>
+
+</body>
+</html>
